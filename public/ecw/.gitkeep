@@ -1,0 +1,6 @@
+# ECW screenshots
+# Place PHI-redacted PNGs/JPGs here and reference them from content/ecw/*.mdx frontmatter:
+# steps:
+#   - title: ...
+#     detail: ...
+#     screenshot: /ecw/your-file.png

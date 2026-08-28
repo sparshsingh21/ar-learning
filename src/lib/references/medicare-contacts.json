@@ -1,0 +1,160 @@
+[
+  {
+    "contractor": "Noridian Healthcare Solutions",
+    "regions": [
+      {
+        "states": "Alaska, Arizona, Idaho, Montana, North Dakota, Oregon, South Dakota, Utah, Washington, Wyoming",
+        "ivr": "1-877-908-8431",
+        "customerService": "1-877-908-8431",
+        "links": {
+          "appealForms": "https://med.noridianmedicare.com/"
+        }
+      },
+      {
+        "states": "California, Hawaii, Nevada, American Samoa, Guam, Northern Mariana Islands",
+        "ivr": "1-855-609-9960",
+        "customerService": "1-855-609-9960",
+        "links": {
+          "appealForms": "https://med.noridianmedicare.com/"
+        }
+      }
+    ]
+  },
+  {
+    "contractor": "Medicare FL / First Coast Service Options Inc",
+    "regions": [
+      {
+        "states": "Florida, Puerto Rico, US Virgin Islands",
+        "ivr": "1-877-847-4992",
+        "customerService": "1-866-454-9007",
+        "links": {
+          "ivrGuide": "https://medicare.fcso.com/",
+          "appealForms": "https://medicare.fcso.com/"
+        }
+      }
+    ]
+  },
+  {
+    "contractor": "Novitas Solutions",
+    "regions": [
+      {
+        "states": "Arkansas, Colorado, Louisiana, Mississippi, New Mexico, Oklahoma, Texas, Indian Health & Veteran Affairs",
+        "ivr": "1-855-252-8782",
+        "customerService": "1-855-252-8782",
+        "links": {
+          "ivrGuide": "https://www.novitas-solutions.com/",
+          "appealForms": "https://www.novitas-solutions.com/",
+          "appealStatus": "https://www.novitas-solutions.com/"
+        }
+      },
+      {
+        "states": "Pennsylvania, New Jersey, Maryland, District of Columbia, Delaware",
+        "ivr": "1-877-235-8073",
+        "customerService": "1-877-235-8073",
+        "links": {
+          "ivrGuide": "https://www.novitas-solutions.com/",
+          "appealForms": "https://www.novitas-solutions.com/",
+          "appealStatus": "https://www.novitas-solutions.com/"
+        }
+      }
+    ]
+  },
+  {
+    "contractor": "Palmetto GBA",
+    "regions": [
+      {
+        "states": "Virginia, South Carolina, North Carolina, West Virginia",
+        "ivr": "1-855-696-0705",
+        "customerService": "1-855-696-0705",
+        "links": {
+          "ivrGuide": "https://www.palmettogba.com/",
+          "appealForms": "https://www.palmettogba.com/",
+          "redeterminationStatus": "https://www.palmettogba.com/"
+        }
+      },
+      {
+        "states": "Alabama, Georgia, Tennessee",
+        "ivr": "1-877-567-7271",
+        "customerService": "1-877-567-7271",
+        "links": {
+          "ivrGuide": "https://www.palmettogba.com/",
+          "appealForms": "https://www.palmettogba.com/",
+          "redeterminationStatus": "https://www.palmettogba.com/"
+        }
+      }
+    ]
+  },
+  {
+    "contractor": "CGS Administrators, LLC",
+    "regions": [
+      {
+        "states": "Kentucky & Ohio",
+        "ivr": "1-866-290-4036",
+        "customerService": "1-866-276-9558",
+        "links": {
+          "ivrGuide": "https://www.cgsmedicare.com/",
+          "appealForms": "https://www.cgsmedicare.com/"
+        }
+      }
+    ]
+  },
+  {
+    "contractor": "Wisconsin Physicians Service Insurance Corporation (WPS)",
+    "regions": [
+      {
+        "states": "Iowa, Kansas, Missouri, Nebraska",
+        "ivr": "1-866-518-3285",
+        "customerService": "1-866-518-3285",
+        "links": {
+          "appealForms": "https://www.wpsgha.com/"
+        }
+      },
+      {
+        "states": "Indiana & Michigan",
+        "ivr": "1-866-234-7331",
+        "customerService": "1-866-234-7331",
+        "links": {
+          "appealForms": "https://www.wpsgha.com/"
+        }
+      }
+    ]
+  },
+  {
+    "contractor": "National Government Services (NGS)",
+    "regions": [
+      {
+        "states": "Connecticut, Maine, Massachusetts, New Hampshire, New York, Rhode Island, Vermont",
+        "ivr": "1-877-869-6504",
+        "customerService": "1-866-837-0241",
+        "links": {
+          "ivrGuide": "https://www.ngsmedicare.com/",
+          "appealForms": "https://www.ngsmedicare.com/"
+        }
+      },
+      {
+        "states": "Illinois, Minnesota, Wisconsin",
+        "ivr": "1-877-908-9499 / 1-866-234-7340",
+        "customerService": "1-877-908-9499 / 1-866-234-7340",
+        "links": {
+          "ivrGuide": "https://www.ngsmedicare.com/",
+          "appealForms": "https://www.ngsmedicare.com/"
+        }
+      }
+    ]
+  },
+  {
+    "contractor": "Palmetto Railroad Medicare",
+    "regions": [
+      {
+        "states": "All States",
+        "ivr": "1-877-288-7600",
+        "customerService": "1-888-355-9165",
+        "links": {
+          "ivrGuide": "https://www.palmettogba.com/medicare",
+          "appealForms": "https://www.palmettogba.com/medicare",
+          "redeterminationStatus": "https://www.palmettogba.com/medicare"
+        }
+      }
+    ]
+  }
+]

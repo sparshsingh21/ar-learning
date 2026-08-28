@@ -1,0 +1,44 @@
+---
+title: Revenue Cycle Management Steps
+description: A practical walkthrough of RCM and where Accounts Receivable sits in the cycle.
+section: learn
+tags: [rcm, workflow, basics]
+order: 2
+updated: 2026-08-27
+whenToUse: Use this to connect an AR scenario back to the step that originally broke.
+---
+
+## The cycle at a glance
+
+1. **Patient access** — scheduling, registration, demographics
+2. **Insurance verification** — eligibility, benefits, authorizations
+3. **Clinical documentation** — encounter notes that support coding
+4. **Coding** — CPT, HCPCS, ICD-10-CM (and ICD-10-PCS for inpatient facility)
+5. **Charge entry / claim creation** — charges become a claim
+6. **Claim scrubbing** — edits catch missing data before submission
+7. **Clearinghouse** — routes the claim; may reject for format/data issues
+8. **Payer adjudication** — payer accepts, pays, denies, or pend
+9. **Remittance** — EOB (paper) or ERA (electronic)
+10. **Payment posting** — payments, adjustments, and denials hit the ledger
+11. **AR follow-up** — unpaid or unclear balances are worked
+12. **Denial management / appeals** — rework or formal appeal when needed
+13. **Patient collections** — remaining patient responsibility after insurance
+
+## Where AR owns the outcome
+
+AR becomes active when:
+
+- No remit arrives after expected turnaround
+- A denial needs investigation
+- Payment looks incorrect (underpay, overpay, wrong patient)
+- Coordination of benefits (COB) is unresolved
+- The claim is stuck in a payer pend status
+
+## Rejections vs denials
+
+- **Rejection** — claim never entered payer processing (clearinghouse or payer front-end edit). Fix data and resubmit as a new/corrected claim per process.
+- **Denial** — payer processed the claim and refused payment (or paid $0) with a reason code. Action depends on the reason: correct and resubmit, appeal, bill secondary, or transfer to patient.
+
+## Tip for new analysts
+
+When you open an account, ask: **Which RCM step failed?** Eligibility? Auth? Coding? Enrollment? Filing limit? That question keeps your research focused.

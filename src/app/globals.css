@@ -1,26 +1,183 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f4f8f9;
+  --bg-elevated: #ffffff;
+  --fg: #0f1c24;
+  --fg-muted: #4a5d6a;
+  --border: #d5e0e6;
+  --accent: #0d7c7c;
+  --accent-deep: #0a5f5f;
+  --accent-soft: #e6f4f4;
+  --accent-warm: #c45c26;
+  --hero-from: #0a3d4a;
+  --hero-via: #0d5c63;
+  --hero-to: #148a8a;
+  --warning: #b45309;
+  --success: #047857;
+  --shadow: 0 12px 40px rgba(15, 28, 36, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-warm: var(--accent-warm);
+  --color-hero-from: var(--hero-from);
+  --color-hero-via: var(--hero-via);
+  --color-hero-to: var(--hero-to);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+.prose-guide {
+  max-width: 68ch;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--fg);
+}
+
+.prose-guide h2 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--fg);
+}
+
+.prose-guide h3 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 650;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-guide p {
+  margin: 0.85rem 0;
+  color: color-mix(in srgb, var(--fg) 92%, var(--fg-muted));
+}
+
+.prose-guide ul,
+.prose-guide ol {
+  margin: 0.85rem 0;
+  padding-left: 1.35rem;
+}
+
+.prose-guide li {
+  margin: 0.35rem 0;
+}
+
+.prose-guide ul {
+  list-style: disc;
+}
+
+.prose-guide ol {
+  list-style: decimal;
+}
+
+.prose-guide strong {
+  font-weight: 650;
+  color: var(--fg);
+}
+
+.prose-guide a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-guide code {
+  font-size: 0.9em;
+  background: var(--accent-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+}
+
+.prose-guide blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+  color: var(--fg-muted);
+}
+
+.prose-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.95rem;
+}
+
+.prose-guide th,
+.prose-guide td {
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose-guide th {
+  background: var(--accent-soft);
+  font-weight: 650;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(12px, -8px, 0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.7s ease-out 0.12s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.7s ease-out 0.24s both;
+}
+
+.hero-orb {
+  animation: drift 14s ease-in-out infinite;
 }

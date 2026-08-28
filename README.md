@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AR Training Guide
 
-## Getting Started
+Public learning site for US medical billing **Accounts Receivable (AR)** — RCM basics, denial scenarios, eClinicalWorks (ECW) click-paths, and AR calculators.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router) + TypeScript + Tailwind CSS v4
+- MDX content via `gray-matter` + `next-mdx-remote`
+- Client search with Fuse.js (`⌘K`)
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content
 
-## Learn More
+Guides live in `/content` as MDX with YAML frontmatter:
 
-To learn more about Next.js, take a look at the following resources:
+| Folder | Section |
+| --- | --- |
+| `content/learn` | Core AR / RCM articles |
+| `content/scenarios` | Full AR scenario library (61 playbooks — status + denials) |
+| `content/denials` | Denial playbooks (54) + denial management overview |
+| `content/ecw` | ECW usage guides |
+| `content/references` | Phones, forms, websites |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The scenario/denial catalog is defined in `src/lib/ar-scenario-catalog.ts`. Regenerate MDX with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npx tsx -e 'import { AR_SCENARIO_CATALOG } from "./src/lib/ar-scenario-catalog.ts"; import fs from "fs"; fs.writeFileSync("scripts/ar-scenario-catalog.json", JSON.stringify(AR_SCENARIO_CATALOG, null, 2));'
+node scripts/generate-scenario-mdx.js
+```
 
-## Deploy on Vercel
+Prepare Notes schemas are mapped per slug in `src/lib/note-forms/registry.ts`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Frontmatter fields: `title`, `description`, `section`, `tags`, `order`, `updated`, optional `status` (`published` \| `stub`), `whenToUse`, and for scenarios `questions` / `suggestedNotes`. ECW pages may include a `steps` array with optional `screenshot` paths.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Add an article
+
+1. Create `content/<section>/my-topic.mdx`
+2. Set frontmatter (`section` must match the folder)
+3. Restart or refresh — pages are generated from the filesystem at build time
+
+### ECW screenshots
+
+1. Add PHI-redacted images under `public/ecw/`
+2. Reference them in frontmatter:
+
+```yaml
+steps:
+  - title: Open AR queue
+    detail: ...
+    screenshot: /ecw/ar-queue.png
+```
+
+Scenario pages and denial articles include a **Prepare Notes** form. Fields are **per scenario/denial** (matching ARLearningOnline patterns) — e.g. medical records asks for MR mode/fax, auth asks auth#/retro paths, no-response asks TFL/coverage. Schemas live in `src/lib/note-forms/registry.ts`.
+
+## Tools
+
+- `/tools/days-in-ar`
+- `/tools/tfl-afl`
+- `/tools/attrition`
+- `/tools/payment-validator`
+
+## Deploy
+
+Deploy to Vercel or any Node host that supports Next.js. Update `metadataBase` in `src/app/layout.tsx` and URLs in `src/app/sitemap.ts` / `robots.ts` for production.

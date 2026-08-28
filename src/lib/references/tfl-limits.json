@@ -1,0 +1,494 @@
+[
+  {
+    "name": "AARP",
+    "tfl": "15 months"
+  },
+  {
+    "name": "Absolute Total Care",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Aetna (Commercial)",
+    "tfl": "120 days"
+  },
+  {
+    "name": "Aetna Better Health Of NJ (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Aetna Better Health of CA (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Aetna Better Health of FL (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Aetna Better Health Of GA (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Aetna Better Health of IL (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Aetna Better Health of KY (Medicaid & Medicare)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Aetna Better Health of KY (Medicaid)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Aetna Better Health of OH (Medicaid)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Aetna Better Health of PA (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Aetna Better Health of WV (Medicaid)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Affinity Medical Group",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Alameda Alliance for Health",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Allwell from Superior Healthplan",
+    "tfl": "95 days"
+  },
+  {
+    "name": "Altrua Healthshare",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Ambetter from Arkansas Health & Wellness",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Ambetter from NH Healthy Families",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Ambetter from Superior HealthPlan",
+    "tfl": "95 days"
+  },
+  {
+    "name": "Ambetter Of TN",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Amerigroup IA (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Amerigroup Medicare Advantage (Non-Participating Provider)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Amerigroup Medicare Advantage (Participating Provider)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Amerigroup Of GA (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Amerigroup Of TX (Medicaid)",
+    "tfl": "95 days"
+  },
+  {
+    "name": "Amerigroup TN (Medicaid)",
+    "tfl": "120 days"
+  },
+  {
+    "name": "Amerigroup TX (Medicaid)",
+    "tfl": "95 days"
+  },
+  {
+    "name": "Amerigroup WA (Medicaid)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Anthem BCBS CA (Commercial & Medicare - Participating Provider)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Anthem BCBS CA (Non-Participating Provider)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Anthem BCBS GA (Professional Claims)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Anthem BCBS ME (Professional Claims)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Anthem BCBS MO (Professional Claims)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Anthem BCBS NV (Medicaid Managed Care - Non-Participating Provider)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Anthem BCBS NV (Medicaid Managed Care - Participating Provider)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Anthem BCBS Of OH (Professional Claims)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Anthem BCBS VA (Professional claims - Commercial & Medicare Advantage)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Bankers Life",
+    "tfl": "15 months"
+  },
+  {
+    "name": "BCBS AL (Medicare Advantage)",
+    "tfl": "15 Months"
+  },
+  {
+    "name": "BCBS AR",
+    "tfl": "180 days"
+  },
+  {
+    "name": "BCBS DE",
+    "tfl": "2 years"
+  },
+  {
+    "name": "BCBS KS",
+    "tfl": "15 months"
+  },
+  {
+    "name": "BCBS LA",
+    "tfl": "15 months"
+  },
+  {
+    "name": "BCBS MA (HMO/POS/PPO/Medicare Advantage)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "BCBS MA (Indemnity)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "BCBS MI",
+    "tfl": "365 days"
+  },
+  {
+    "name": "BCBS MN",
+    "tfl": "180 days"
+  },
+  {
+    "name": "BCBS NC",
+    "tfl": "18 months"
+  },
+  {
+    "name": "BCBS ND",
+    "tfl": "365 days"
+  },
+  {
+    "name": "BCBS NE",
+    "tfl": "120 days"
+  },
+  {
+    "name": "BCBS NM",
+    "tfl": "180 days"
+  },
+  {
+    "name": "BCBS RI (Non-Participating Provider)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "BCBS RI (Participating Provider - Commercial & Medicare)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "BCBS RI (Participating Provider - Dental Services)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "BCBS SC",
+    "tfl": "180 days"
+  },
+  {
+    "name": "BCBS TX (Medicaid)",
+    "tfl": "95 days"
+  },
+  {
+    "name": "BCBS VT",
+    "tfl": "180 days"
+  },
+  {
+    "name": "BCBS WY",
+    "tfl": "365 days"
+  },
+  {
+    "name": "CGS Administrators, LLC",
+    "tfl": "365 days"
+  },
+  {
+    "name": "ChampVA",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Cigna (Non Participating Provider)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Cigna (Participating Provider)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Emblemhealth (Non-Participating Provider - Commercial)",
+    "tfl": "18 months"
+  },
+  {
+    "name": "Emblemhealth (Non-Participating Provider - Medicaid)",
+    "tfl": "15 months"
+  },
+  {
+    "name": "Emblemhealth (Non-Participating Provider - Medicare)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Emblemhealth (Participating Provider)",
+    "tfl": "120 days"
+  },
+  {
+    "name": "Empire BCBS Of NY (Medicaid - Non-Participating Provider & Facility)",
+    "tfl": "15 months"
+  },
+  {
+    "name": "Empire BCBS Of NY (Medicaid - Participating Provider & Facility)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Fidelis Care NY",
+    "tfl": "90 days"
+  },
+  {
+    "name": "First Coast Service Option Inc",
+    "tfl": "365 days"
+  },
+  {
+    "name": "GEHA",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Geisinger Health Plan (GHP)",
+    "tfl": "4 months"
+  },
+  {
+    "name": "Health Alliance",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Horizon BCBS NJ",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Humana (Commercial Plan)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Humana (Medicare Advantage Plan)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid AL",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid AR",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid AZ",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Medicaid CO",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid DC",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid FL",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid GA",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Medicaid IN",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Medicaid KY",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid LA",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid MD",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid MI",
+    "tfl": "12 months"
+  },
+  {
+    "name": "Medicaid MN",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid MS",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid NC",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid NY",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Medicaid OH",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid PA",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Medicaid RI",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid TX",
+    "tfl": "95 days"
+  },
+  {
+    "name": "Medicaid UT",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid VA",
+    "tfl": "356 days"
+  },
+  {
+    "name": "Medicaid WV",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicaid WY",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Medicare FL",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Metroplus NY (Medicaid & Medicare)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Molina Healthcare of TX",
+    "tfl": "95 days"
+  },
+  {
+    "name": "National Government Services (NGS) Administers",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Noridian Healthcare Solutions",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Novitas Solutions",
+    "tfl": "365 days"
+  },
+  {
+    "name": "NV Medicaid (In-State Provider)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "NV Medicaid (Out-Of-State Provider)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "PA Health & Wellness",
+    "tfl": "180 days"
+  },
+  {
+    "name": "Palmetto Gba",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Palmetto Railroad Medicare",
+    "tfl": "365 days"
+  },
+  {
+    "name": "PeachState Of GA (Medicaid)",
+    "tfl": "6 months"
+  },
+  {
+    "name": "Sonder Health Plan",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Tricare",
+    "tfl": "365 days"
+  },
+  {
+    "name": "Unicare (Par, Non - Par & Facility)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "United Healthcare Commercial (Professional Claims - Non-Par Provider)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "United Healthcare Commercial (Professional Claims - Par Provider)",
+    "tfl": "90 days"
+  },
+  {
+    "name": "UPMC Health Plan (Medicare & Commercial)",
+    "tfl": "365 days"
+  },
+  {
+    "name": "UPMC Health Plan (Medicaid)",
+    "tfl": "180 days"
+  },
+  {
+    "name": "VNS Health",
+    "tfl": "90 days"
+  },
+  {
+    "name": "Wellcare Of GA (Medicaid)",
+    "tfl": "6 months"
+  },
+  {
+    "name": "Wisconsin Physicians Service Insurance Corporation",
+    "tfl": "365 days"
+  }
+]

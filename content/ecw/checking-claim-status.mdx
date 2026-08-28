@@ -1,0 +1,24 @@
+---
+title: Checking Claim Status in ECW
+description: Use ECW claim history and clearinghouse integrations before making a payer call.
+section: ecw
+tags: [ecw, claim-status, clearinghouse]
+order: 3
+updated: 2026-08-27
+whenToUse: Use before every payer call to avoid asking for information already on screen.
+steps:
+  - title: Open claim status / history
+    detail: From the claim, open status history to see submission dates, payer claim numbers, rejects, and remits already posted.
+  - title: Review clearinghouse response
+    detail: Confirm whether the claim was accepted by the clearinghouse and forwarded to the payer, or rejected with an edit.
+  - title: Capture identifiers
+    detail: Copy payer claim number, patient member ID as billed, NPI/Tax ID used, and billed amount into your notes before calling.
+  - title: Decide portal vs phone
+    detail: If status is clear (paid, denied with code, rejected), act in-system. Call only when status is missing, conflicting, or needs appeal/COB detail.
+---
+
+## Common pitfalls
+
+- Searching the wrong DOS or wrong subscriber ID format
+- Missing that a **corrected claim** replaced the original
+- Calling on a rejection that only needs data fix and resubmit

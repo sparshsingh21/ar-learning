@@ -1,0 +1,31 @@
+---
+title: Understanding Negative Claim Balances
+description: Why AR accounts go into credit (negative) balance and what to check before taking action.
+section: learn
+tags: [credit-balance, posting, overpayment]
+order: 7
+updated: 2026-08-27
+whenToUse: Use when an account shows a credit balance or patient/insurance overpayment signals.
+---
+
+## Debit vs credit in simple terms
+
+- **Positive (debit) balance** — money still expected
+- **Negative (credit) balance** — more money was applied than the remaining charge warrants
+
+## Common causes
+
+1. **Posting error** — wrong payment, duplicate posting, or incorrect adjustment
+2. **Duplicate payer payment**
+3. **Retroactive eligibility / COB change** after payment
+4. **Corrected claim** reducing charges after payment posted
+5. **Patient paid** while insurance also paid the same portion
+
+## What to do
+
+1. Recalculate billed / allowed / paid / adjustments (try the [Payment Validator](/tools/payment-validator))
+2. Compare to the ERA/EOB line by line
+3. Identify whether refund is due to payer or patient
+4. Follow client credit-balance SOP (many sites have a dedicated CB team)
+
+Do not write off or refund until the root cause is clear and approved under policy.

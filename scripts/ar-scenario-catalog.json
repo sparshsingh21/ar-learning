@@ -1,0 +1,1509 @@
+[
+  {
+    "slug": "no-claim-on-file",
+    "title": "No Claim on File",
+    "description": "Payer shows no claim received — verify coverage, TFL, payer ID, and resubmit or fax with POTF.",
+    "kind": "status",
+    "noteSchema": "noClaimOnFile",
+    "whenToUse": "When portal/call status is not on file / no claim received.",
+    "questions": [
+      "May I have policy effective and termed date?",
+      "Is the policy active on the DOS?",
+      "What is the timely filing limit?",
+      "May I have claim mailing address, Payer ID, and Fax#?",
+      "Can we fax or mail the claim along with POTF?",
+      "May I get the call reference number?"
+    ],
+    "outline": [
+      "Confirm clearinghouse acceptance vs rejection first",
+      "Verify eligibility and COB on DOS",
+      "Confirm TFL and gather POTF if past TFL",
+      "Resubmit, fax, or release to patient per findings"
+    ],
+    "actions": [
+      "Resubmitted the claim",
+      "Claim released to patient",
+      "Faxed the claim",
+      "Need client assistance"
+    ],
+    "order": 1
+  },
+  {
+    "slug": "claim-in-process",
+    "title": "Claim in Process",
+    "description": "Claim is pending payer processing — check received date, TAT, and delay reasons.",
+    "kind": "status",
+    "noteSchema": "claimInProcess",
+    "whenToUse": "When status is pending / in process / under review.",
+    "questions": [
+      "When did you receive the claim?",
+      "What is the normal processing time or TAT?",
+      "Is the claim still within TAT?",
+      "What is the reason for delay?",
+      "What documents or information are requested?",
+      "May I have the claim# and call ref#?"
+    ],
+    "outline": [
+      "Calculate TAT from received date",
+      "If within TAT, set follow-up for remaining days",
+      "If delayed for provider docs, send or task client",
+      "If delayed for patient info, check letter sent date before releasing"
+    ],
+    "actions": [
+      "Need to allow more time",
+      "Claim released to patient",
+      "Need client assistance"
+    ],
+    "order": 2
+  },
+  {
+    "slug": "approved-to-pay",
+    "title": "Claim is Approved to Pay",
+    "description": "Claim finalized to pay but payment not released yet — capture amounts and expected payment timing.",
+    "kind": "status",
+    "noteSchema": "approvedToPay",
+    "whenToUse": "When claim is approved/finalized to pay pending check/EFT release.",
+    "questions": [
+      "What is the processed date?",
+      "What are allowed, paid, and patient responsibility amounts?",
+      "When can we expect the payment?",
+      "May I have the claim# and call ref#?"
+    ],
+    "outline": [
+      "Validate allowed = paid + patient responsibility",
+      "Document expected payment timeframe",
+      "Set follow-up for expected release date"
+    ],
+    "actions": [
+      "Need to allow time",
+      "Need client assistance"
+    ],
+    "order": 3
+  },
+  {
+    "slug": "claim-paid",
+    "title": "Claim Paid",
+    "description": "Payer reports claim paid — verify amounts, check details, and confirm posting.",
+    "kind": "status",
+    "noteSchema": "claimPaid",
+    "whenToUse": "When status is paid and you need to confirm remittance details.",
+    "questions": [
+      "What is the processed and paid date?",
+      "What are allowed, paid, deductible, coinsurance, and copay?",
+      "What is the check/EFT number and issue date?",
+      "May I have the claim# and call ref#?"
+    ],
+    "outline": [
+      "Match ERA/EOB to payer statements",
+      "Confirm payment reached the provider",
+      "Work underpayments via paid incorrectly scenario if variance exists"
+    ],
+    "actions": [
+      "Payment posted / confirmed",
+      "Need to allow time for payment posting",
+      "Need client assistance"
+    ],
+    "order": 4
+  },
+  {
+    "slug": "claim-paid-offset",
+    "title": "Claim Paid & Applied Towards Offset",
+    "description": "Payment applied to prior overpayment/offset — document offset details and remaining balance.",
+    "kind": "status",
+    "noteSchema": "claimPaidOffset",
+    "whenToUse": "When remittance shows payment applied to recovery/offset.",
+    "questions": [
+      "What amount was paid on this claim?",
+      "What amount was taken as offset and for which claim?",
+      "Is a demand letter or recovery detail available?",
+      "May I have the claim# and call ref#?"
+    ],
+    "outline": [
+      "Identify original overpayment claim tied to offset",
+      "Confirm whether offset is valid",
+      "Escalate disputed offsets per client SOP"
+    ],
+    "actions": [
+      "Offset accepted / documented",
+      "Need client assistance",
+      "Need to submit an appeal"
+    ],
+    "order": 5
+  },
+  {
+    "slug": "claim-paid-to-patient",
+    "title": "100: Claim Paid to Patient",
+    "description": "Benefits paid to patient/insured — usually AOB or OON; confirm reason and patient billing path.",
+    "kind": "status",
+    "noteSchema": "paidToPatient",
+    "whenToUse": "When remittance or status shows payment issued to the patient.",
+    "questions": [
+      "What is the processed and paid date?",
+      "What are allowed, paid, and patient responsibility amounts?",
+      "Why was the claim paid to the patient?",
+      "May I have the claim# and call ref#?"
+    ],
+    "outline": [
+      "Do not bill secondary solely because primary paid patient",
+      "Release/balance to patient per SOP",
+      "Review AOB / OON root cause to prevent repeats"
+    ],
+    "actions": [
+      "Claim released to patient",
+      "Need client assistance"
+    ],
+    "order": 6
+  },
+  {
+    "slug": "claim-applied-to-deductible",
+    "title": "1: Claim Applied Towards Deductible",
+    "description": "Allowed amount applied to deductible — confirm amounts and patient responsibility.",
+    "kind": "status",
+    "noteSchema": "patientResponsibility",
+    "whenToUse": "When status/EOB shows deductible application with little/no insurer payment.",
+    "questions": [
+      "What deductible amount was applied?",
+      "What is remaining patient responsibility?",
+      "Is deductible YTD confirmed?",
+      "May I have the claim# and call ref#?"
+    ],
+    "outline": [
+      "Validate deductible vs contract",
+      "Transfer patient balance when insurance portion is complete"
+    ],
+    "actions": [
+      "Claim released to patient",
+      "Need client assistance"
+    ],
+    "order": 7
+  },
+  {
+    "slug": "patient-cannot-be-identified",
+    "title": "31: Claim Denied as Patient Cannot Be Identified",
+    "description": "Member match failed — incorrect name, DOB, gender, or policy ID.",
+    "kind": "denial",
+    "noteSchema": "patientNotIdentified",
+    "whenToUse": "When denial cites patient not found / cannot be identified.",
+    "questions": [
+      "Could you search by name, DOB, or SSN?",
+      "What demographic was incorrect?",
+      "May I have the correct policy ID?",
+      "Is the claim on file under the corrected member?",
+      "May I get the call ref#?"
+    ],
+    "outline": [
+      "Correct demographics and resubmit when match is found",
+      "Release to patient if no active coverage on DOS",
+      "For Medicare, verify MBI and name order carefully"
+    ],
+    "actions": [
+      "Claim released to patient",
+      "Updated the correct patient name and resubmitted the claim",
+      "Updated the correct DOB and resubmitted the claim",
+      "Updated the correct Policy ID and resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 8
+  },
+  {
+    "slug": "coverage-terminated",
+    "title": "26/27: Claim Denied as Coverage Terminated",
+    "description": "Policy inactive on DOS — find other coverage or release to patient.",
+    "kind": "denial",
+    "noteSchema": "eligibilityBenefits",
+    "whenToUse": "When denial states coverage terminated / not eligible on DOS.",
+    "questions": [
+      "What are the effective and termed dates?",
+      "Is there another active policy on DOS?",
+      "May I have the correct member ID if coverage moved?",
+      "May I get the claim# and call ref#?"
+    ],
+    "outline": [
+      "Confirm termed date vs DOS",
+      "Bill other active payer if found",
+      "Otherwise transfer to patient per SOP"
+    ],
+    "actions": [
+      "Billed other payer",
+      "Claim released to patient",
+      "Updated demographics and resubmitted",
+      "Need client assistance"
+    ],
+    "order": 9
+  },
+  {
+    "slug": "timely-filing-expired",
+    "title": "29: Claim Denied as Timely Filing Limit Expired",
+    "description": "TFL denial — gather POTF, appeal if timely, otherwise write off per policy.",
+    "kind": "denial",
+    "noteSchema": "timelyFiling",
+    "whenToUse": "When denial cites timely filing / filing limit expired.",
+    "questions": [
+      "What timely filing limit is being applied and from which date?",
+      "Do you show any earlier claim number or acceptance?",
+      "What proof of timely filing do you accept?",
+      "What is the appeal limit and address/fax?",
+      "May I have the claim# and call ref#?"
+    ],
+    "outline": [
+      "Compare first submission proof to payer TFL clock",
+      "Appeal with POTF when within original filing window",
+      "Write off when truly late and no exception"
+    ],
+    "actions": [
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Write off the claim",
+      "Need client assistance"
+    ],
+    "order": 10
+  },
+  {
+    "slug": "authorization-absent",
+    "title": "197: Claim Denied as Authorization Absent or Missing",
+    "description": "Prior auth missing/invalid — reprocess with auth#, retro auth, or appeal/write-off.",
+    "kind": "denial",
+    "noteSchema": "authorizationMissing",
+    "whenToUse": "When denial cites missing/invalid prior authorization.",
+    "questions": [
+      "May I get the denial date?",
+      "Is an Auth# available on your system or hospital claim?",
+      "Can you reprocess using Auth# on file?",
+      "Was this an emergency (POS 23) service?",
+      "Is retro authorization possible and what is the procedure?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "If auth exists, ask for reprocess or corrected claim",
+      "Emergency POS may not require auth — confirm with payer",
+      "Follow retro auth procedure or appeal/write-off path"
+    ],
+    "actions": [
+      "Updated the Auth# and resubmitted the claim",
+      "Need to allow time",
+      "Need client assistance",
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Write off the claim"
+    ],
+    "order": 11
+  },
+  {
+    "slug": "referral-absent",
+    "title": "288: Claim Denied as Referral Absent or Missing",
+    "description": "Missing referral from PCP/referring provider — obtain referral or appeal.",
+    "kind": "denial",
+    "noteSchema": "referralMissing",
+    "whenToUse": "When denial cites missing referral.",
+    "questions": [
+      "Was a referral required for this specialty/CPT?",
+      "Is a referral number on file?",
+      "Can the claim be reprocessed with the referral#?",
+      "What is the appeal limit if referral cannot be obtained?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Locate referral in records/portal",
+      "Corrected claim or reprocess when number exists",
+      "Patient liability or appeal when referral cannot be obtained"
+    ],
+    "actions": [
+      "Updated referral and resubmitted",
+      "Need to allow time",
+      "Need client assistance",
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Claim released to patient"
+    ],
+    "order": 12
+  },
+  {
+    "slug": "maximum-benefit-exhausted",
+    "title": "119: Claim Denied as Maximum Benefit Exhausted/Reached",
+    "description": "Benefit max met for CPT/period — confirm remaining benefits and patient liability.",
+    "kind": "denial",
+    "noteSchema": "maxBenefit",
+    "whenToUse": "When denial cites benefit maximum / frequency limit reached.",
+    "questions": [
+      "Which benefit maximum was applied?",
+      "What is the benefit period and units used?",
+      "Is any remaining benefit available?",
+      "Should balance go to secondary or patient?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Confirm max vs billed units/frequency",
+      "Bill secondary if available after primary adjudication",
+      "Otherwise release patient responsibility"
+    ],
+    "actions": [
+      "Claim released to patient",
+      "Billed secondary",
+      "Need client assistance",
+      "Need to submit an appeal"
+    ],
+    "order": 13
+  },
+  {
+    "slug": "non-covered-charges",
+    "title": "96: Claim Denied as Non-Covered Charges",
+    "description": "Service not covered under patient plan or provider contract.",
+    "kind": "denial",
+    "noteSchema": "nonCoveredCharges",
+    "whenToUse": "When denial cites non-covered charges without a more specific reason.",
+    "questions": [
+      "Is it non-covered under patient plan or provider contract?",
+      "What is the specific reason?",
+      "Has the same CPT paid before for this provider?",
+      "What is the appeal limit and submission mode?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Route DX issues to coding when plan excludes diagnosis",
+      "Check prior payment history for contract disputes",
+      "Appeal, bill other payer, or release to patient"
+    ],
+    "actions": [
+      "Resubmitted the claim",
+      "Claim released to patient",
+      "Need client assistance",
+      "Need coding assistance",
+      "Need to submit an appeal",
+      "Appeal sent"
+    ],
+    "order": 14
+  },
+  {
+    "slug": "non-covered-out-of-network",
+    "title": "242: Claim Denied as Non-Covered — Provider Out of Network",
+    "description": "OON denial — confirm network status, OON benefits, and patient liability.",
+    "kind": "denial",
+    "noteSchema": "outOfNetwork",
+    "whenToUse": "When denial states provider is out of network.",
+    "questions": [
+      "Is the rendering/billing provider out of network for this plan?",
+      "Are out-of-network benefits available?",
+      "Was a gap exception or single-case agreement used?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Verify enrollment/network roster",
+      "If OON benefits exist, confirm patient coinsurance",
+      "Otherwise patient liability or appeal with exception docs"
+    ],
+    "actions": [
+      "Claim released to patient",
+      "Need client assistance",
+      "Need to submit an appeal",
+      "Appeal sent"
+    ],
+    "order": 15
+  },
+  {
+    "slug": "additional-info-from-patient",
+    "title": "227: Claim Denied — Additional Information Requested from Patient",
+    "description": "Payer waiting on patient-supplied information — confirm letter status and next steps.",
+    "kind": "denial",
+    "noteSchema": "infoFromPatient",
+    "whenToUse": "When pend/denial requests information from the patient.",
+    "questions": [
+      "What information was requested from the patient?",
+      "Was a letter sent and on what date?",
+      "How long will the claim pend waiting for patient response?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Allow reasonable wait after letter sent per client SOP",
+      "Release to patient when wait window expires"
+    ],
+    "actions": [
+      "Need to allow more time",
+      "Claim released to patient",
+      "Need client assistance"
+    ],
+    "order": 16
+  },
+  {
+    "slug": "additional-info-from-provider",
+    "title": "226: Claim Denied — Additional Information Requested from Provider",
+    "description": "Payer needs documents from provider — send within time limit or write off.",
+    "kind": "denial",
+    "noteSchema": "additionalInfoFromProvider",
+    "whenToUse": "When denial/pend requests documents from the billing/rendering provider.",
+    "questions": [
+      "May I get the denial date?",
+      "What documents are requested?",
+      "What is the fax# or mailing address?",
+      "How much time is allowed to send documents?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Send available documents before deadline",
+      "Task client when documents are not on hand",
+      "Write off only when limit passed and client allows"
+    ],
+    "actions": [
+      "Need client assistance",
+      "Need to submit an appeal",
+      "Requested document sent",
+      "Adjusted off the claim"
+    ],
+    "order": 17
+  },
+  {
+    "slug": "medical-records-requested",
+    "title": "163: Claim Denied as Medical Records Requested",
+    "description": "Chart notes/op report requested — send via fax/mail/portal within time limit.",
+    "kind": "denial",
+    "noteSchema": "medicalRecords",
+    "whenToUse": "When denial or pend specifically requests medical records.",
+    "questions": [
+      "May I get the denial date?",
+      "What is the Fax# or mailing address to send MR?",
+      "How much is the time limit to send the records?",
+      "May I have the claim# and call ref#?"
+    ],
+    "outline": [
+      "Calculate deadline from denial date",
+      "Send only requested records labeled with claim#",
+      "Confirm receipt when possible"
+    ],
+    "actions": [
+      "Need client assistance",
+      "Need to submit an appeal",
+      "MR sent",
+      "Adjusted off the claim"
+    ],
+    "order": 18
+  },
+  {
+    "slug": "duplicate",
+    "title": "18: Claim Denied as Duplicate",
+    "description": "Payer sees a prior adjudication — find original claim and work that outcome.",
+    "kind": "denial",
+    "noteSchema": "duplicateClaim",
+    "whenToUse": "When CARC/RARC indicates duplicate submission.",
+    "questions": [
+      "What is the original claim number?",
+      "What is the original claim status (paid/denied)?",
+      "Are DOS, CPT, and units identical?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Work the original claim, not only the duplicate",
+      "Void/adjust duplicate when original is correct",
+      "Appeal original if underpaid or wrongly denied"
+    ],
+    "actions": [
+      "Adjusted off the claim",
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Need client assistance"
+    ],
+    "order": 19
+  },
+  {
+    "slug": "patient-enrolled-hospice",
+    "title": "B9: Claim Denied as Patient Enrolled in Hospice",
+    "description": "Hospice election affects coverage — confirm hospice dates and billable services.",
+    "kind": "denial",
+    "noteSchema": "hospice",
+    "whenToUse": "When denial cites hospice enrollment.",
+    "questions": [
+      "What are the hospice election dates?",
+      "Is the billed service related to the hospice diagnosis?",
+      "Which provider should be billed for this service?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Confirm whether service is hospice-related",
+      "Route to correct payer/provider when appropriate",
+      "Appeal unrelated services with documentation"
+    ],
+    "actions": [
+      "Need client assistance",
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Write off the claim",
+      "Claim released to patient"
+    ],
+    "order": 20
+  },
+  {
+    "slug": "modifier-inconsistent-with-procedure",
+    "title": "4: Claim Denied — Procedure Code Inconsistent with Modifier",
+    "description": "Modifier does not match CPT rules — coding review required.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites modifier/procedure inconsistency.",
+    "questions": [
+      "Which CPT and modifier combination denied?",
+      "What remark code was returned?",
+      "Is a corrected claim or appeal required?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Task coding with exact codes and remarks",
+      "Resubmit corrected claim after coding update"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Need coding assistance",
+      "Resubmitted the claim",
+      "Need to submit an appeal",
+      "Need client assistance"
+    ],
+    "order": 21
+  },
+  {
+    "slug": "invalid-modifier-on-dos",
+    "title": "182: Claim Denied for Invalid Modifier on Date of Service",
+    "description": "Modifier not valid for DOS — correct or remove per coding guidance.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial states modifier invalid on DOS.",
+    "questions": [
+      "Which modifier is invalid for the DOS?",
+      "What corrected modifier is required if any?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Coding review of modifier effective dates",
+      "Corrected claim with valid modifier set"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Need coding assistance",
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 22
+  },
+  {
+    "slug": "diagnosis-inconsistent-with-procedure",
+    "title": "11: Claim Denied — Diagnosis Inconsistent with Procedure",
+    "description": "ICD does not support CPT — coding/medical necessity review.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites DX inconsistent with procedure.",
+    "questions": [
+      "Which diagnosis and CPT combination was denied?",
+      "What supporting DX would allow payment?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Route to coding for alternative DX if documented",
+      "Appeal with records when clinical support exists"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Need coding assistance",
+      "Need to submit an appeal",
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 23
+  },
+  {
+    "slug": "diagnosis-invalid-on-dos",
+    "title": "146: Claim Denied — Diagnosis Code Invalid for Date of Service",
+    "description": "ICD not valid on DOS — update to effective code and resubmit.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites invalid diagnosis for DOS.",
+    "questions": [
+      "Which ICD code is invalid for the DOS?",
+      "What is the replacement code?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Coding corrects ICD",
+      "Submit corrected claim"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 24
+  },
+  {
+    "slug": "procedure-invalid-on-dos",
+    "title": "181: Claim Denied — Procedure Code Invalid on Date of Service",
+    "description": "CPT/HCPCS not valid on DOS — coding correction required.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites invalid procedure code for DOS.",
+    "questions": [
+      "Which CPT/HCPCS is invalid on DOS?",
+      "What is the correct code for that date?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Coding updates CPT",
+      "Corrected claim resubmission"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 25
+  },
+  {
+    "slug": "referring-provider-not-eligible",
+    "title": "183: Claim Denied — Referring Provider Not Eligible to Refer",
+    "description": "Referring/ordering provider enrollment issue — credentialing path.",
+    "kind": "denial",
+    "noteSchema": "providerEnrollment",
+    "whenToUse": "When denial cites referring/ordering provider not eligible.",
+    "questions": [
+      "Which referring NPI is on the claim?",
+      "What is the enrollment status on DOS?",
+      "Can claims reprocess after enrollment update?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Task credentialing with payer statements",
+      "Correct referring NPI if wrong provider billed"
+    ],
+    "actions": [
+      "Tasked credentialing",
+      "Need client assistance",
+      "Need to allow time",
+      "Need to submit an appeal",
+      "Write off the claim"
+    ],
+    "order": 26
+  },
+  {
+    "slug": "primary-eob-required",
+    "title": "23: Claim Denied for Primary EOB",
+    "description": "Secondary needs primary EOB/payment info before adjudicating.",
+    "kind": "denial",
+    "noteSchema": "secondaryBilling",
+    "whenToUse": "When secondary denies pending primary EOB.",
+    "questions": [
+      "Did primary crossover automatically?",
+      "What primary payment and patient liability should cross?",
+      "What address/fax/portal is used to send primary EOB?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Attach primary EOB and resubmit/reopen secondary",
+      "Confirm primary posting is complete first"
+    ],
+    "actions": [
+      "Billed secondary with primary EOB",
+      "Need to allow time",
+      "Need client assistance"
+    ],
+    "order": 27
+  },
+  {
+    "slug": "other-payer-primary",
+    "title": "22: Claim Denied as Other Payer is Primary",
+    "description": "COB order wrong — bill correct primary then secondary.",
+    "kind": "denial",
+    "noteSchema": "coordinationOfBenefits",
+    "whenToUse": "When denial states another payer should be primary.",
+    "questions": [
+      "What is the COB order effective on DOS?",
+      "Who is the correct primary payer?",
+      "Has primary already processed?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Update COB and bill correct primary",
+      "Forward primary remit to secondary afterward"
+    ],
+    "actions": [
+      "Billed correct primary",
+      "Billed secondary with primary EOB",
+      "Need client assistance",
+      "Need to submit an appeal"
+    ],
+    "order": 28
+  },
+  {
+    "slug": "secondary-without-primary-info",
+    "title": "MA04: Claim Denied — Secondary Cannot Consider Without Primary Info",
+    "description": "Secondary lacks primary identity/payment information — supply primary details/EOB.",
+    "kind": "denial",
+    "noteSchema": "coordinationOfBenefits",
+    "whenToUse": "When secondary denies for missing primary payment information.",
+    "questions": [
+      "What primary payer ID and claim number are required?",
+      "Do you need the primary EOB attached?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Submit primary EOB and payer details",
+      "Confirm crossover vs manual secondary billing"
+    ],
+    "actions": [
+      "Billed secondary with primary EOB",
+      "Need client assistance",
+      "Need to allow time"
+    ],
+    "order": 29
+  },
+  {
+    "slug": "claim-not-covered-by-payer",
+    "title": "109: Claim Denied as Claim Not Covered by This Payer",
+    "description": "Wrong plan/product billed — identify correct payer and rebill.",
+    "kind": "denial",
+    "noteSchema": "eligibilityBenefits",
+    "whenToUse": "When payer states they do not cover this claim/plan.",
+    "questions": [
+      "Which plan should have been billed?",
+      "Is the patient eligible elsewhere on DOS?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Update plan and payer ID",
+      "Bill correct carrier",
+      "Release to patient if no other coverage"
+    ],
+    "actions": [
+      "Billed other payer",
+      "Updated demographics and resubmitted",
+      "Claim released to patient",
+      "Need client assistance"
+    ],
+    "order": 30
+  },
+  {
+    "slug": "capitation-managed-care",
+    "title": "24: Claim Paid/Denied under Capitation or Managed Care Plan",
+    "description": "Capitated arrangement — confirm if fee-for-service billing is appropriate.",
+    "kind": "denial",
+    "noteSchema": "capitation",
+    "whenToUse": "When status/denial cites capitation or managed care payment.",
+    "questions": [
+      "Is the provider capitated for this plan on DOS?",
+      "Should this CPT be carved out of capitation?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Confirm capitation contract vs claim type",
+      "Write off or patient bill only per contract SOP"
+    ],
+    "actions": [
+      "Adjusted off the claim",
+      "Claim released to patient",
+      "Need client assistance",
+      "Need to submit an appeal"
+    ],
+    "order": 31
+  },
+  {
+    "slug": "invalid-place-of-service",
+    "title": "58: Claim Denied for Invalid Place of Service",
+    "description": "POS code incorrect for service — correct and resubmit.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites invalid or inconsistent POS.",
+    "questions": [
+      "Which POS was billed and which is required?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Correct POS",
+      "Resubmit corrected claim"
+    ],
+    "actions": [
+      "Resubmitted the claim",
+      "Tasked coding team",
+      "Need client assistance"
+    ],
+    "order": 32
+  },
+  {
+    "slug": "primary-paid-more-than-secondary-allowed",
+    "title": "Claim Denied — Primary Paid More Than Secondary Allowed",
+    "description": "Secondary pays $0 because primary payment meets/exceeds secondary allowed.",
+    "kind": "denial",
+    "noteSchema": "secondaryBilling",
+    "whenToUse": "When secondary denies/pays zero due to primary payment exceeding allowed.",
+    "questions": [
+      "What was primary paid and secondary allowed?",
+      "Is any patient responsibility remaining?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Usually expected outcome — confirm math",
+      "Close secondary balance per posting rules"
+    ],
+    "actions": [
+      "Payment posted / confirmed",
+      "Claim released to patient",
+      "Need client assistance"
+    ],
+    "order": 33
+  },
+  {
+    "slug": "medically-not-necessary",
+    "title": "50: Claim Denied as Medically Not Necessary",
+    "description": "Medical necessity denial — gather clinical documentation and appeal.",
+    "kind": "denial",
+    "noteSchema": "medicalNecessity",
+    "whenToUse": "When denial cites medical necessity / not medically necessary.",
+    "questions": [
+      "What LCD/NCD or policy was applied?",
+      "What documents are required for appeal?",
+      "What is the appeal limit and submission mode?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Collect supporting clinical records",
+      "File appeal within deadline",
+      "Involve clinicians when documentation is weak"
+    ],
+    "actions": [
+      "Need client assistance",
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Tasked coding team",
+      "Write off the claim"
+    ],
+    "order": 34
+  },
+  {
+    "slug": "workers-compensation-liability",
+    "title": "19: Claim Denied — Worker's Compensation Liability",
+    "description": "Payer says WC is liable — confirm WC claim and bill correct carrier.",
+    "kind": "denial",
+    "noteSchema": "otherLiability",
+    "whenToUse": "When denial shifts liability to Worker's Compensation.",
+    "questions": [
+      "Is there an open WC claim for this injury?",
+      "What is the WC carrier and claim number?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Bill WC with injury details",
+      "Do not keep chasing medical plan if WC is confirmed primary"
+    ],
+    "actions": [
+      "Billed other payer",
+      "Need client assistance",
+      "Need to submit an appeal"
+    ],
+    "order": 35
+  },
+  {
+    "slug": "liability-carrier",
+    "title": "20: Claim Denied — Covered by Liability Carrier",
+    "description": "Third-party liability — bill liability carrier when confirmed.",
+    "kind": "denial",
+    "noteSchema": "otherLiability",
+    "whenToUse": "When denial cites liability carrier responsibility.",
+    "questions": [
+      "Which liability carrier is responsible?",
+      "What is the liability claim number?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Obtain liability billing path",
+      "Update payer and rebill"
+    ],
+    "actions": [
+      "Billed other payer",
+      "Need client assistance",
+      "Need to submit an appeal"
+    ],
+    "order": 36
+  },
+  {
+    "slug": "no-fault-auto",
+    "title": "21: Claim Denied — No-Fault / Auto Insurance Liability",
+    "description": "Auto/no-fault coverage primary for accident-related services.",
+    "kind": "denial",
+    "noteSchema": "otherLiability",
+    "whenToUse": "When denial cites no-fault or auto insurance liability.",
+    "questions": [
+      "What is the auto/no-fault carrier and claim number?",
+      "What is the date of accident?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Bill auto/no-fault first",
+      "Medical plan only after exhaustion if rules allow"
+    ],
+    "actions": [
+      "Billed other payer",
+      "Need client assistance",
+      "Need to submit an appeal"
+    ],
+    "order": 37
+  },
+  {
+    "slug": "bundle-inclusive",
+    "title": "97: Claim Denied as Bundle/Inclusive",
+    "description": "Service bundled into another payment — coding/NCCI review.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites bundling or inclusive procedure.",
+    "questions": [
+      "Which code is inclusive of the denied CPT?",
+      "Is an unbundling modifier appropriate?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Coding reviews NCCI edits",
+      "Appeal only with documentation supporting separate payment"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Adjusted off the claim",
+      "Need to submit an appeal",
+      "Need client assistance"
+    ],
+    "order": 38
+  },
+  {
+    "slug": "globally-inclusive-to-surgery",
+    "title": "97: Claim Denied as Globally Inclusive to Surgery",
+    "description": "Service falls in global surgical package.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites global period / inclusive to surgery.",
+    "questions": [
+      "What is the related surgery DOS and CPT?",
+      "Is the service within the global period?",
+      "Does modifier 24/25/79 apply?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Coding validates global package rules",
+      "Resubmit with correct modifier or adjust"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Resubmitted the claim",
+      "Adjusted off the claim",
+      "Need client assistance"
+    ],
+    "order": 39
+  },
+  {
+    "slug": "procedure-combination-not-compatible",
+    "title": "236: Claim Denied — Procedure Combination Not Compatible",
+    "description": "Mutually exclusive / incompatible CPT combination.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites incompatible procedure combination.",
+    "questions": [
+      "Which CPT pair is incompatible?",
+      "Which code should remain?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Coding selects payable code set",
+      "Corrected claim"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 40
+  },
+  {
+    "slug": "procedure-not-paid-separately",
+    "title": "234: Claim Denied — Procedure Not Paid Separately",
+    "description": "Add-on or incidental service not separately payable.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial states procedure not paid separately.",
+    "questions": [
+      "Is the CPT an add-on requiring a parent code?",
+      "Was the parent procedure billed?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Correct coding linkage",
+      "Adjust if truly not separately payable"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Adjusted off the claim",
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 41
+  },
+  {
+    "slug": "rendering-provider-not-eligible",
+    "title": "185: Claim Denied — Rendering Provider Not Eligible",
+    "description": "Rendering provider not enrolled/eligible for billed service.",
+    "kind": "denial",
+    "noteSchema": "providerEnrollment",
+    "whenToUse": "When denial cites rendering provider not eligible.",
+    "questions": [
+      "What is the rendering NPI enrollment status on DOS?",
+      "Can claims reprocess after enrollment?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Credentialing owns enrollment fix",
+      "Hold/rebill per SOP"
+    ],
+    "actions": [
+      "Tasked credentialing",
+      "Need client assistance",
+      "Need to allow time",
+      "Write off the claim"
+    ],
+    "order": 42
+  },
+  {
+    "slug": "procedure-inconsistent-with-specialty",
+    "title": "8: Claim Denied — Procedure Inconsistent with Provider Specialty",
+    "description": "CPT not payable for provider specialty type.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites specialty/provider type mismatch.",
+    "questions": [
+      "What specialty is on file for the rendering provider?",
+      "Is a different rendering provider appropriate?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Validate taxonomy/specialty",
+      "Correct provider or adjust"
+    ],
+    "actions": [
+      "Need client assistance",
+      "Tasked credentialing",
+      "Tasked coding team",
+      "Write off the claim"
+    ],
+    "order": 43
+  },
+  {
+    "slug": "routine-services-not-covered",
+    "title": "49: Claim Denied as Routine Services Not Covered",
+    "description": "Routine/screening service not a covered benefit for plan.",
+    "kind": "denial",
+    "noteSchema": "nonCoveredCharges",
+    "whenToUse": "When denial cites routine services not covered.",
+    "questions": [
+      "Is there a preventive benefit that should apply?",
+      "Was the wrong CPT or DX used for screening?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Coding reviews screening vs diagnostic coding",
+      "Patient liability if truly routine non-covered"
+    ],
+    "actions": [
+      "Need coding assistance",
+      "Claim released to patient",
+      "Need to submit an appeal",
+      "Need client assistance"
+    ],
+    "order": 44
+  },
+  {
+    "slug": "provider-not-certified-eligible",
+    "title": "B7: Claim Denied — Provider Not Certified/Eligible on DOS",
+    "description": "Provider certification/enrollment not effective on DOS.",
+    "kind": "denial",
+    "noteSchema": "providerEnrollment",
+    "whenToUse": "When denial cites provider not certified/eligible on DOS.",
+    "questions": [
+      "What is the certification/enrollment effective date?",
+      "Will payer reprocess after update?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Credentialing remediation",
+      "Write-off if DOS before eligibility and no exception"
+    ],
+    "actions": [
+      "Tasked credentialing",
+      "Need to allow time",
+      "Need client assistance",
+      "Write off the claim"
+    ],
+    "order": 45
+  },
+  {
+    "slug": "pre-existing-condition",
+    "title": "51: Claim Denied as Pre-Existing Condition Not Covered",
+    "description": "Plan excludes pre-existing condition — confirm policy terms.",
+    "kind": "denial",
+    "noteSchema": "eligibilityBenefits",
+    "whenToUse": "When denial cites pre-existing condition exclusion.",
+    "questions": [
+      "What look-back period applies?",
+      "Is there other coverage that pays?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Confirm exclusion language",
+      "Bill other payer or patient"
+    ],
+    "actions": [
+      "Claim released to patient",
+      "Billed other payer",
+      "Need to submit an appeal",
+      "Need client assistance"
+    ],
+    "order": 46
+  },
+  {
+    "slug": "procedure-inconsistent-with-gender",
+    "title": "7: Claim Denied — Procedure Inconsistent with Patient Gender",
+    "description": "CPT/gender edit — verify demographics and coding.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites procedure inconsistent with gender.",
+    "questions": [
+      "Is patient gender correct in demographics?",
+      "Is CPT appropriate for the patient?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Fix demographics if wrong",
+      "Coding reviews CPT selection"
+    ],
+    "actions": [
+      "Updated demographics and resubmitted",
+      "Tasked coding team",
+      "Need client assistance"
+    ],
+    "order": 47
+  },
+  {
+    "slug": "procedure-inconsistent-with-age",
+    "title": "6: Claim Denied — Procedure Inconsistent with Patient Age",
+    "description": "CPT/age edit — verify DOB and code selection.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites procedure inconsistent with age.",
+    "questions": [
+      "Is DOB correct?",
+      "Is an age-appropriate CPT required?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Correct DOB or CPT",
+      "Resubmit"
+    ],
+    "actions": [
+      "Updated demographics and resubmitted",
+      "Tasked coding team",
+      "Need client assistance"
+    ],
+    "order": 48
+  },
+  {
+    "slug": "diagnosis-inconsistent-with-gender",
+    "title": "10: Claim Denied — Diagnosis Inconsistent with Patient Gender",
+    "description": "ICD/gender edit — verify demographics and diagnosis.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites diagnosis inconsistent with gender.",
+    "questions": [
+      "Is gender correct?",
+      "Is ICD correct for the patient?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Fix demographics or ICD",
+      "Resubmit"
+    ],
+    "actions": [
+      "Updated demographics and resubmitted",
+      "Tasked coding team",
+      "Need client assistance"
+    ],
+    "order": 49
+  },
+  {
+    "slug": "diagnosis-inconsistent-with-age",
+    "title": "9: Claim Denied — Diagnosis Inconsistent with Patient Age",
+    "description": "ICD/age edit — verify DOB and diagnosis.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites diagnosis inconsistent with age.",
+    "questions": [
+      "Is DOB correct?",
+      "Is ICD age-appropriate?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Correct DOB or ICD",
+      "Resubmit"
+    ],
+    "actions": [
+      "Updated demographics and resubmitted",
+      "Tasked coding team",
+      "Need client assistance"
+    ],
+    "order": 50
+  },
+  {
+    "slug": "invalid-missing-ndc",
+    "title": "M119: Claim Denied for Invalid or Missing NDC Code",
+    "description": "Drug claim missing/invalid NDC — correct and resubmit.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites NDC invalid or missing.",
+    "questions": [
+      "Which NDC is required?",
+      "What unit of measure is expected?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Pharmacy/coding supplies correct NDC",
+      "Corrected claim"
+    ],
+    "actions": [
+      "Resubmitted the claim",
+      "Need coding assistance",
+      "Need client assistance"
+    ],
+    "order": 51
+  },
+  {
+    "slug": "invalid-missing-clia",
+    "title": "MA120: Claim Denied for Invalid or Missing CLIA Number",
+    "description": "Lab claim needs valid CLIA — update and resubmit.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites CLIA invalid or missing.",
+    "questions": [
+      "Which CLIA number should be on the claim?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Add/correct CLIA",
+      "Resubmit"
+    ],
+    "actions": [
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 52
+  },
+  {
+    "slug": "new-vs-established-patient",
+    "title": "Claim Denied — New/Established Patient Criteria Not Met",
+    "description": "E/M new vs established mismatch — coding review.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites new/established patient criteria.",
+    "questions": [
+      "Has the patient been seen by the specialty within 3 years?",
+      "Which E/M code should apply?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Coding corrects new vs established",
+      "Resubmit"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 53
+  },
+  {
+    "slug": "prior-processing-incorrect",
+    "title": "129: Claim Denied — Prior Processing Information Appears Incorrect",
+    "description": "Payer indicates prior processing data wrong — clarify and reprocess/appeal.",
+    "kind": "denial",
+    "noteSchema": "paidIncorrectly",
+    "whenToUse": "When denial/remark cites prior processing information incorrect.",
+    "questions": [
+      "What prior processing data is considered incorrect?",
+      "Can the claim be reprocessed with corrected information?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Supply corrected data",
+      "Request reprocess or appeal"
+    ],
+    "actions": [
+      "Need to allow time",
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Need client assistance"
+    ],
+    "order": 54
+  },
+  {
+    "slug": "cpt-maximum-allowance",
+    "title": "151: Claim Denied — CPT Maximum Allowance for Time Period",
+    "description": "Frequency/MUE limit reached for CPT in a period.",
+    "kind": "denial",
+    "noteSchema": "maxBenefit",
+    "whenToUse": "When denial cites CPT maximum allowance / frequency limit.",
+    "questions": [
+      "What is the allowed frequency and period?",
+      "How many units already paid in the period?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Confirm count vs policy",
+      "Appeal with records if medically necessary beyond limit",
+      "Otherwise patient or write-off per SOP"
+    ],
+    "actions": [
+      "Claim released to patient",
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Need client assistance"
+    ],
+    "order": 55
+  },
+  {
+    "slug": "date-of-death-precedes-dos",
+    "title": "13: Claim Denied — Date of Death Precedes Date of Service",
+    "description": "DOS after date of death on file — verify demographics/DOS.",
+    "kind": "denial",
+    "noteSchema": "eligibilityBenefits",
+    "whenToUse": "When denial cites date of death before DOS.",
+    "questions": [
+      "What date of death is on file?",
+      "Is the DOS correct?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Correct DOS or DOD if payer data wrong",
+      "Write off if service truly after death"
+    ],
+    "actions": [
+      "Updated demographics and resubmitted",
+      "Write off the claim",
+      "Need client assistance"
+    ],
+    "order": 56
+  },
+  {
+    "slug": "experimental-investigational",
+    "title": "55: Claim Denied — Experimental/Investigational",
+    "description": "Payer deems service experimental — appeal with literature/policy.",
+    "kind": "denial",
+    "noteSchema": "medicalNecessity",
+    "whenToUse": "When denial cites experimental or investigational treatment.",
+    "questions": [
+      "Which policy labels the service experimental?",
+      "What documentation is required for appeal?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Collect clinical justification",
+      "Appeal or patient liability"
+    ],
+    "actions": [
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Claim released to patient",
+      "Need client assistance",
+      "Write off the claim"
+    ],
+    "order": 57
+  },
+  {
+    "slug": "revenue-procedure-mismatch",
+    "title": "199: Claim Denied — Revenue Code and Procedure Code Do Not Match",
+    "description": "Facility revenue code incompatible with CPT — coding fix.",
+    "kind": "denial",
+    "noteSchema": "codingDenial",
+    "whenToUse": "When denial cites revenue code / procedure mismatch.",
+    "questions": [
+      "Which revenue code and CPT were billed?",
+      "What combination is required?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Facility coding corrects pairing",
+      "Resubmit UB claim"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Resubmitted the claim",
+      "Need client assistance"
+    ],
+    "order": 58
+  },
+  {
+    "slug": "charge-exceeds-fee-schedule",
+    "title": "45: Claim Denied — Charge Exceeds Fee Schedule/Maximum Allowable",
+    "description": "Contractual reduction or fee schedule cap — verify if true denial vs adjustment.",
+    "kind": "denial",
+    "noteSchema": "paidIncorrectly",
+    "whenToUse": "When remark/denial cites charge exceeds fee schedule or max allowable.",
+    "questions": [
+      "What allowed amount was applied?",
+      "Is this a contractual adjustment or a true denial?",
+      "Is underpayment vs contract suspected?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Often informational with payment — confirm posting",
+      "Appeal only when allowed is below contract"
+    ],
+    "actions": [
+      "Accepted contractual adjustment",
+      "Need to submit an appeal",
+      "Appeal sent",
+      "Need client assistance"
+    ],
+    "order": 59
+  },
+  {
+    "slug": "level-of-service-not-supported",
+    "title": "150: Claim Denied — Information Does Not Support Level of Service",
+    "description": "E/M or service level not supported — may be coding, medical necessity, or records.",
+    "kind": "denial",
+    "noteSchema": "medicalNecessity",
+    "whenToUse": "When denial states submitted information does not support level of service.",
+    "questions": [
+      "Is the issue coding level, medical necessity, or records?",
+      "What documents are required?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Check remark codes for true root cause",
+      "Route to coding or send MR / appeal accordingly"
+    ],
+    "actions": [
+      "Tasked coding team",
+      "Need to submit an appeal",
+      "MR sent",
+      "Need client assistance"
+    ],
+    "order": 60
+  },
+  {
+    "slug": "paid-to-another-provider",
+    "title": "B20: Claim Denied — Already Paid to Another Provider",
+    "description": "Payment issued to a different provider — verify NPI and request reprocess/refund path.",
+    "kind": "denial",
+    "noteSchema": "duplicateClaim",
+    "whenToUse": "When denial states claim already paid to another provider.",
+    "questions": [
+      "Which NPI/Tax ID was paid?",
+      "Can payment be reissued/reprocessed to the correct provider?",
+      "May I have claim# and call ref#?"
+    ],
+    "outline": [
+      "Confirm correct billing provider",
+      "Request void/reissue or corrected claim path"
+    ],
+    "actions": [
+      "Need to allow time",
+      "Need to submit an appeal",
+      "Need client assistance",
+      "Resubmitted the claim"
+    ],
+    "order": 61
+  }
+]
